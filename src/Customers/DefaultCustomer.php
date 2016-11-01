@@ -9,11 +9,12 @@
 namespace california\hotel\Customers;
 
 
-class defaultCustomer extends CustomersModel
+class DefaultCustomer extends CustomersModel
 {
     public function __construct()
     {
-        echo 'New customer created'.'<br>';
+        parent::__construct();
+        echo 'New DefaultCustomer created'.'<br>';
     }
 
     public function somePayment()
@@ -27,11 +28,11 @@ class defaultCustomer extends CustomersModel
     public function numVisits($count)
     {
         if ($count < 10) {
-            echo 'Ordinary customer';
+            echo 'Ordinary customer'.'<br>';
         } elseif ($count < 100) {
-            echo 'Regular customer';
+            echo 'Regular customer'.'<br>';
         } elseif ($count >= 100) {
-            echo 'VIP';
+            echo 'VIP'.'<br>';
         }
     }
 }
