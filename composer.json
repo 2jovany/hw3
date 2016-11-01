@@ -1,0 +1,19 @@
+{
+    "name": "california/hotel",
+    "description": "A simple object model of the hotel California",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jovany",
+            "email": "jovany@ua.fm"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "california\\hotel\\":"src"
+        }
+    }
+}
