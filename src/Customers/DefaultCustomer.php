@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: yura
  * Date: 01.11.16
- * Time: 0:57
+ * Time: 0:57.
  */
 
 namespace california\hotel\Customers;
-
 
 class DefaultCustomer extends CustomersModel
 {

@@ -2,7 +2,6 @@
 
 namespace california\hotel\Customers;
 
-
 abstract class CustomersModel
 {
     public $name;
@@ -12,7 +11,7 @@ abstract class CustomersModel
     {
         echo 'New Abstract CustomerModel'.'<br>';
     }
-    public function setCustomerInfo($name,$age,$gender)
+    public function setCustomerInfo($name, $age, $gender)
     {
         $this->name = $name;
         $this->age = $age;

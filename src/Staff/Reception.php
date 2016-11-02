@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: yura
  * Date: 01.11.16
- * Time: 7:55
+ * Time: 7:55.
  */
 
 namespace california\hotel\Staff;
-
 
 class Reception implements StaffInterface
 {
