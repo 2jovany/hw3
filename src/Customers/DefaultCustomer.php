@@ -3,18 +3,22 @@
  * Created by PhpStorm.
  * User: yura
  * Date: 01.11.16
- * Time: 0:57
+ * Time: 0:57.
  */
 
 namespace california\hotel\Customers;
 
-
 class DefaultCustomer extends CustomersModel
 {
-    public function __construct()
+    /**
+     * @return string
+     */
+    public function __toString()
     {
-        parent::__construct();
-        echo 'New DefaultCustomer created'.'<br>';
+        $result = parent::__toString();
+        $result .= 'New DefaultCustomer created'.'<br>';
+
+        return $result;
     }
 
     public function somePayment()
@@ -27,12 +31,15 @@ class DefaultCustomer extends CustomersModel
      */
     public function numVisits($count)
     {
+        $result = '';
         if ($count < 10) {
-            echo 'Ordinary customer'.'<br>';
+            $result = 'Ordinary customer'.'<br>';
         } elseif ($count < 100) {
-            echo 'Regular customer'.'<br>';
+            $result = 'Regular customer'.'<br>';
         } elseif ($count >= 100) {
-            echo 'VIP'.'<br>';
+            $result = 'VIP'.'<br>';
         }
+
+        return $result;
     }
 }
