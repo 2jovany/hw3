@@ -12,6 +12,8 @@ class Kitchen implements StaffInterface
 {
     public function introduce()
     {
-        echo 'Our dishes will please not only your stomach, and make your soul sing!'.'<br>';
+        $message = 'Our dishes will please not only your stomach, and make your soul sing!'.'<br>';
+
+        return $message;
     }
 }

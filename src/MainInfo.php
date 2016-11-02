@@ -13,23 +13,29 @@ use california\hotel\Staff\Clearing;
 use california\hotel\Staff\Kitchen;
 use california\hotel\Staff\Security;
 
-class Request extends HotelRequest
+class MainInfo extends HotelInfo
 {
-    public function RegisterNewCustomer()
+    /**
+     * @return DefaultCustomer|string
+     */
+    public function registerNewCustomer()
     {
         $testCustomer = new DefaultCustomer();
         $testCustomer->setCustomerInfo('Victor', '38', 'male');
-        $testCustomer->numVisits(1001);
-        $testCustomer->getCustomerName();
-        echo $this->HotelName().' is always happy to see you!'.'<br>';
+        $result = $testCustomer;
+        $result .= $testCustomer->numVisits(1001);
+        $result .= $testCustomer->getCustomerName();
+        $result .= $this->getHotelName();
+        $result .= ' is always happy to see you!'.'<br>';
+
+        return $result;
     }
-    public function StaffReport()
+    public function staffReport()
     {
         $housemaid = new Clearing();
-        $housemaid->introduce();
         $cook = new Kitchen();
-        $cook->introduce();
         $agent007 = new Security();
-        $agent007->introduce();
+
+        return $housemaid->introduce().$cook->introduce().$agent007->introduce();
     }
 }

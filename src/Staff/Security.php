@@ -12,6 +12,8 @@ class Security implements StaffInterface
 {
     public function introduce()
     {
-        echo 'We care about your safety. And if someone would break the silence of the night... - we will make him a massage.'.'<br>';
+        $message = 'We care about your safety. And if someone would break the silence of the night... - we will make him a massage.'.'<br>';
+
+        return $message;
     }
 }

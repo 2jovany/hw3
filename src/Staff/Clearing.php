@@ -12,6 +12,8 @@ class Clearing implements StaffInterface
 {
     public function introduce()
     {
-        echo 'We will make sure that the room was clean and always smelled of spring!'.'<br>';
+        $message = 'We will make sure that the room was clean and always smelled of spring!'.'<br>';
+
+        return $message;
     }
 }

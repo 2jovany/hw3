@@ -12,6 +12,8 @@ class Reception implements StaffInterface
 {
     public function introduce()
     {
-        echo 'We will provide a comfortable and pleasant stay of every guest in our hotel thanks to the services of exceptional quality.'.'<br>';
+        $message = 'We will provide a comfortable and pleasant stay of every guest in our hotel thanks to the services of exceptional quality.'.'<br>';
+
+        return $message;
     }
 }

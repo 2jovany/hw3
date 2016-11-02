@@ -4,13 +4,19 @@ namespace california\hotel\Customers;
 
 abstract class CustomersModel
 {
-    public $name;
-    public $age;
-    public $gender;
-    public function __construct()
+    private $name;
+    private $age;
+    private $gender;
+    public function __toString()
     {
-        echo 'New Abstract CustomerModel'.'<br>';
+        return 'New Abstract CustomerModel'.'<br>';
     }
+
+    /**
+     * @param $name string
+     * @param $age integer
+     * @param $gender string
+     */
     public function setCustomerInfo($name, $age, $gender)
     {
         $this->name = $name;
@@ -19,7 +25,7 @@ abstract class CustomersModel
     }
     public function getCustomerName()
     {
-        echo 'Hello '.$this->name.'<br>';
+        return 'Hello '.$this->name.'<br>';
     }
     abstract public function somePayment();
     abstract public function numVisits($count);
